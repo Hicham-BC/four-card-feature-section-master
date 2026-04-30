@@ -1,0 +1,82 @@
+/* ----------VARIABLES & SETUP---------- */
+
+:root {
+  /* ------COLORS------ */
+  
+  --primary-red: #ea5353;
+  --primary-cyan: #45d3d3;
+  --primary-oragne: #fcaf4a;
+  --primary-blue: #549ef2;
+  --grey-500: #4c4e61;
+  --grey-400: #697077;
+  --body-bg: #fefefe;
+  --white: #ffffff;
+
+  /* ------FONTS------ */
+
+  --fluid-font-0: clamp(0.9375rem, 0.9375rem + 0vw, 0.9375rem);
+  --fluid-font-1: clamp(1.1719rem, 1.1177rem + 0.231vw, 1.3256rem);
+  --fluid-font-2: clamp(1.4648rem, 1.3206rem + 0.6153vw, 1.8744rem);
+
+  /* ------WHITE SPACE------ */
+  --fluid-50-70: clamp(3.125rem, 2.6849rem + 1.8779vw, 4.375rem);
+}
+
+/* ----------BASE & RESET---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--grey-400);
+  font-family: "Poppins", sans-serif;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}
+
+/* ----------GLOBAL---------- */
+
+h1, h2 {
+  color: var(--grey-500);
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: var(--fluid-font-2);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--fluid-font-1);
+  font-weight: 600;
+}
+
+span {
+  font-size: var(--fluid-font-2);
+  font-weight: 200;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.card p {
+  font-weight: 200;
+}
+
+/* ----------COMPONENTS---------- */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--fluid-50-70);
+  padding: 1rem;
+}
