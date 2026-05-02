@@ -100,18 +100,18 @@ p {
 
 .card {
   background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: subgrid;
   box-shadow: 3px 3px 10px var(--shadow);
-  gap: 2rem;
   padding: var(--fluid-16-32);
   border: none;
   border-radius: var(--main-radius);
 }
 
 .card .icon {
-  align-self: flex-end;
+  justify-self: end;
+  align-self: end;
 }
 
 .card p {
@@ -134,12 +134,12 @@ p {
   border-top: 5px solid var(--primary-blue);
 }
 
-/*  */
+/* ----------MEDIA QUERRIES---------- */
 
-@media (min-width: 1174px) {
+@media (min-width: 1170px) {
   .cards {
     grid-template-columns: repeat(3, minmax(350px, 1fr));
-    grid-template-rows: repeat(4, 110px);
+    grid-template-rows: repeat(4, minmax(110px, 1fr));
   }
 
   .teamBuilder {
